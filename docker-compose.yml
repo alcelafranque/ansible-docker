@@ -1,0 +1,7 @@
+version: '2'
+services:
+    ansible:
+        build: ./ansible
+        command: "tail -f  /var/log/lastlog" 
+        volumes:
+            - ./ansible/files:/etc/ansible/playbook/
